@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<style>
+  @media(max-width: 760px){
+     .bas{
+      padding-top: 0.5cm;} 
+      .ss{
+          padding-left: 0.5cm;padding-right: 0.5cM;
+      }
+  }   
+  
+  .ss{
+      padding-left: 0.5cm;
+  }
+  </style>
+<br>
+<br>
+<br>
+<br>
+<div class ="row">
+  <div class="col-md-10 offset-md-3">
+      <div class="col-lg-8 bas">
+          <h3>PROJELER</h3>
+          <hr>
+          </div>
+</div>
+</div>
+
+
+{% if article %}
+
+{% for article in article %}
+<div class="row">
+<div class="col-md-10 offset-md-3">
+
+<!-- Post Content Column -->
+<div class="col-lg-8">
+
+<!-- Title -->
+<a href="{% url 'detail' article.id %}"><h2 class="mt-4">{{article.title}}</h2></a> 
+  
+<!-- Author -->
+<p class="lead">
+  
+  SEFA SUNA tarafından {{article.date}}'de yayınlandı
+</p>
+
+<hr>
+
+<!-- Preview Image -->
+{% if article.image %}
+<a href="{% url 'detail' article.id %}"><img class="img-fluid rounded" src="{{article.image.url}}" alt=""></a>
+{% endif %}
+
+
+<hr>
+
+<!-- Post Content -->
+<p class="lead">
+    {{article.content|safe|truncatewords:30}}
+</p>
+
+<a href="{% url 'detail' article.id %}" class ="btn btn-danger my-3">Devamını Oku</a>
+<hr>
+   
+  </div>
+</div>
+</div>
+
+{% endfor %}
+
+
+{% else %}
+<div class ="row">
+
+<div class="col-md-10 offset-md-3">
+  <div class="col-lg-8">
+<div class = "alert alert-danger">
+Makale Bulunamadı
+</div>
+</div>
+</div>
+</div>
+{% endif %}
+{% endblock body %}

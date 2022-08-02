@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+
+<style>
+    @media(max-width: 760px){
+     
+     .aa{
+      display: none;
+     }
+     .ab{
+      margin-right: 0cm;
+     }
+ 
+    }
+</style>
+<div style="background-color:BLACK;height: 2cm;" class="jumbotron text-center aa ">
+    <h3 style="color:WHITE ;padding-top: 0.3cm;" >HAKKIMDA</h3>
+</div>
+<section style="display:FLEX;">
+<img style=" width: 280px; 
+border-radius: 500cm; margin-left: 2cm;margin-top:0.1cm ;" class="icon aa" src="{% static '1.PNG' %}"/>
+<P  style="padding-left:1cm;margin-top: 3cm;margin-right: 1cm;">Merhaba ben Sefa Suna Eskişehir Osmangazi Üniversitesi 
+    Endüstri Mühendisliği mezunuyum. 26 yaşındayım ve Bursa'da ikamet ediyorum. 
+    Mezun olduktan sonra 8 ay üretim planlama mühendisi olarak çalıştım ve daha sonra
+     yazılıma ve yapay zekaya olan ilgimden dolayı işten ayrıldım. Şuan yazılım alanında Python ve .Net Core dillerinde, yapay zeka alanında ise veri analizi ,makine öğrenmesi ve derin öğrenme üzerine kendimi geliştiriyorum. Python'da Django, Numpy, Pandas, Scikit-learn, Seaborn, Matplotlib, Tensorflow, Apache Spark ve Selenium kütüphanelerinde çalışıyorum. Aynı zamanda SQl ,ileri Excel ve Excel VBA alanlarında çalışmalarım oldu. Sizlerle yaptığım projelerimi paylaşmak için Django'da geliştirdiğim kişisel blog sayfamı kurdum. İstek ve önerileriniz için benimle iletişime geçebilirsiniz.
+
+    </P>
+</section>
+
+<h5 style="margin-left:3cm;padding-top:0.3cm ;" class="ab">BENİMLE İLETİŞİME GEÇİN</h5>
+<section>
+<a target="_blank" style="font-size: 1cm;margin-left:3.5cm ; background-color: white;border-radius:5px;color: black;" href="https://www.linkedin.com/in/sefa-suna-6b72b91b3/" class="fa-brands fa-linkedin-in ad"></a>
+<a  target="_blank" style="font-size: 1cm; background-color: white;border-radius:5px;color: black;margin-left: 1rem;" href="https://github.com/SefaSuna" class="fa-brands fa-github"></a>
+<a target="_blank" style="font-size: 1cm; background-color: white;border-radius:5px;color: black;margin-left: 1rem;" href="https://www.instagram.com/sefasunaa/" class="fa-brands fa-instagram-square"></a>
+<a target="_blank" style="font-size: 1cm; background-color: white;border-radius:5px;color: black;margin-left: 1rem;" href="https://www.kaggle.com/stark1624" class="fa-brands fa-kaggle"></a>
+</section>
+<h6 style="margin-left:3.7cm;padding-top:0.1cm;">sefasuna@gmail.com</h6>
+
+{% endblock body %}
